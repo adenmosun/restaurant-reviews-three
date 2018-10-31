@@ -1,0 +1,26 @@
+{
+  "name": "restaurant-reviews",
+  "short_name": "Reviews",
+  "version": "1.0",
+  "description": "",
+  "manifest_version": 2,
+  "icons": [
+  	{
+    "src": "./Aiga_restaurant_inv.svg.png",
+    "type": "image/png",
+    "sizes": "192x192"
+  },
+  {
+    "src": "./Aiga_restaurant_inv.svg.png",
+    "type": "image/png",
+    "sizes": "512x512"
+  }
+    
+  ],
+  
+  "theme_color": "#264360",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color":"#fff"
+}
+
