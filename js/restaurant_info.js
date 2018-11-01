@@ -252,6 +252,7 @@ addReviews = (review) => {
     const reviewerName = document.createElement('input');
     reviewerName.setAttribute('class', 'reviewer-name');
     reviewerName.setAttribute('type', 'text');
+    reviewerName.setAttribute('aria-label', 'reviewer-name');
     reviewerName.setAttribute('placeholder', 'Your name please...');
     form.appendChild(reviewerName);
 
@@ -259,11 +260,13 @@ addReviews = (review) => {
     reviewerRating.setAttribute('class', 'reviewer-rating');
     reviewerRating.setAttribute('type', 'number');
     reviewerRating.setAttribute('placeholder', 'Your rating...');
+    reviewerRating.setAttribute('aria-label', 'reviewer-rating');
     form.appendChild(reviewerRating);
 
     const reviewerComment = document.createElement('textarea');
     reviewerComment.setAttribute('class', 'reviewer-comment');
     reviewerComment.setAttribute('type', 'text');
+    reviewerComment.setAttribute('aria-label', 'reviewer-comment');
     reviewerComment.setAttribute('placeholder', 'Your review...');
     form.appendChild(reviewerComment);
 

@@ -201,7 +201,7 @@ class DBHelper {
    * Restaurant image URL.
    */
   static imageUrlForRestaurant(restaurant) {
-    const image_path = `./img/${restaurant.photograph.substr(0, 1)}`;
+    const image_path = `./img/${restaurant.id}`;
     return {
       small: `${image_path}-small.jpg`,
       medium: `${image_path}-medium.jpg`,

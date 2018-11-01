@@ -21,5 +21,10 @@
   },
   "author": "Brandy Lee Camacho",
   "linkedIn": "https://www.linkedin.com/in/brandycamacho/",
-  "email": "brandy@udacity.com"
+  "email": "brandy@udacity.com",
+  "devDependencies": {
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-imagemin": "^3.0.0",
+    "grunt-contrib-uglify": "^4.0.0"
+  }
 }

@@ -157,7 +157,7 @@ fillRestaurantsHTML = (restaurants = self.restaurants) => {
  */
 createRestaurantHTML = (restaurant) => {
   const li = document.createElement('li');
-  const image_name = `./img/${restaurant.photograph.substr(0, 1)}`;
+  // const image_name = `./img/${restaurant.photograph.substr(0, 1)}`;
 
   const images = DBHelper.imageUrlForRestaurant(restaurant);
   const image = document.createElement('img');
@@ -191,7 +191,7 @@ createRestaurantHTML = (restaurant) => {
 
 
           let favesIndicator = document.createElement("p");
-          favesIndicator.id = "text";
+          favesIndicator.setAttribute('aria-label', 'checkbox');
 
           favesIndicator.innerHTML = "Indicate Favorite";
           li.append(favesIndicator);
@@ -236,11 +236,16 @@ createRestaurantHTML = (restaurant) => {
             }
           }
 
-          let checkedBox = document.createElement("input");
-          checkedBox.type = "checkbox";
-          checkedBox.id = "indicateFavorite";
-          checkedBox.addEventListener("click", indicatorFunction);
-          li.append(checkedBox);
+          let checkboxLabel = document.createElement("label");
+          checkboxLabel.id = "aria-checkbox-label";
+          checkboxLabel.class = "aria-label";
+
+          let checkBox = document.createElement("input");
+          checkBox.type = "checkbox";
+          checkBox.setAttribute('aria-label', 'aria-checkbox-label');
+          checkBox.addEventListener("click", indicatorFunction);
+          li.append(checkBox);
+
 
   return li
 }
