@@ -195,9 +195,10 @@ createRestaurantHTML = (restaurant) => {
 
           favesIndicator.innerHTML = "Indicate Favorite";
           li.append(favesIndicator);
+
            indicatorFunction = () => {
 
-            if(checkedBox.checked == true){
+            if(checkBox.checked == true){
               favesIndicator.innerHTML = "Favorited";
               favesIndicator.style.color = "#FF905E";
               document.getElementById('restaurants-list').style.backgroundColor="#D4DADC";

@@ -21,7 +21,7 @@
           "Sunday": "12:00 pm - 4:00 pm, 5:30 pm - 11:00 pm"
         },
         "createdAt": 1504095563444,
-        "updatedAt": "2018-10-31T20:58:17.429Z",
+        "updatedAt": "2018-11-01T07:00:48.000Z",
         "id": 1,
         "is_favorite": true
       },
@@ -564,6 +564,24 @@
         "rating": 5,
         "comments": "Thank you",
         "id": 36
+      },
+      {
+        "restaurant_id": 1,
+        "name": "Tayo",
+        "createdAt": 1541055774098,
+        "updatedAt": 1541055774098,
+        "rating": 5,
+        "comments": "Thank you",
+        "id": 37
+      },
+      {
+        "restaurant_id": 1,
+        "name": "Tayo",
+        "createdAt": 1541055815596,
+        "updatedAt": 1541055815596,
+        "rating": 4,
+        "comments": "Thank you",
+        "id": 38
       }
     ]
   },
@@ -619,7 +637,7 @@
       "id": 10
     },
     "reviews": {
-      "id": 36
+      "id": 38
     }
   }
 }
