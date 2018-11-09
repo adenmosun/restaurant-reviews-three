@@ -118,7 +118,7 @@ nav h1 a {
 
 
 #breadcrumb {
-    padding: 10px 40px 16px;
+    padding: 2px 40px 16px;
     list-style: none;
     background-color: #eee;
     font-size: 17px;
@@ -418,11 +418,11 @@ nav h1 a {
   color: #666;
 }
 
-form{
+form {
   text-align: center;
 }
 
-.reviewer-name{
+.name{
   height: 20px;
   border-radius: 20px 50px;
   padding: 15px;
@@ -430,7 +430,7 @@ form{
   width: 60%;
 }
 
-.reviewer-rating{
+.rating{
   height: 20px;
   border-radius: 520px 50px;
   padding: 15px;
@@ -438,7 +438,7 @@ form{
   width: 60%;
 }
 
-.reviewer-comment{
+.comment{
   border-radius: 20px 50px;
   width: 60%;
   height: 170px;
@@ -448,7 +448,7 @@ form{
   font-family: Helvetica;
 }
 
-.review-button{
+.reviews-form button{
   margin-bottom: 50px;
   color: #fff;
   background: #264360;
@@ -459,11 +459,65 @@ form{
 
 
 
+.snackbar{
+  visibility: hidden; 
+  min-width: 250px; 
+  margin-left: -125px; 
+  background-color: #333; 
+  color: #fff; 
+  text-align: center; 
+  border-radius: 2px; 
+  padding: 16px; 
+  position: fixed; 
+  z-index: 1; 
+  left: 50%; 
+  bottom: 30px; 
+}
+
+
+.snackbar.show {
+  visibility: visible; 
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+
+
+
+
+/* ====================== keyframes ====================== */
+@keyframes fadein {
+  from {
+    bottom: 0; 
+    opacity: 0;
+  }
+  to {
+    bottom: 30px; 
+    opacity: 1;
+  }
+}
+
+@keyframes fadeout {
+  from {
+    bottom: 30px; 
+    opacity: 1;
+  }
+  to {
+    bottom: 0; 
+    opacity: 0;
+  }
+}
+
+
 /* ====================== Aria ====================== */
 
 .aria-label {
   display: none;
 }
+
+
+
+
 
 
 

@@ -61,6 +61,41 @@ addEventListener('fetch', event => {
 
 
 
+self.addEventListener('sync', e => {
+  console.log("service worker syncing", e);
+  if(e.tag === "sync-new-reviews") {
+    console.log("syncing new reviews");
+    e.waitUntil(
+      db.addOfflineReviewtoIDB()
+        .then(data => {
+          for (const review of data) {
+            fetch("http://localhost:1337/reviews/", {
+              method: "POST",
+              header: {
+                "Content-Type": "application/json",
+                Accept: "application/json"
+              },
+              body: JSON.stringify({
+                restaurant_id: review.restaurant_id,
+                name: review.name,
+                rating: review.rating,
+                comments: review.comments
+              })
+            })
+            .then(res => res.json())
+            .then(() => {
+              db.deleteOfflineReview(review.id);
+            })
+            .catch(error => console.log('error', error));
+          }
+        })
+        .catch(error => console.log('unable to fetch offine reviews from IDB', error))
+    )
+  }
+})
+
+
+
 self.addEventListener('message', (event) => {
   if (event.data.action === 'skipWaiting') {
     self.skipWaiting();

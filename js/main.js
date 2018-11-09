@@ -199,7 +199,7 @@ createRestaurantHTML = (restaurant) => {
            indicatorFunction = () => {
 
             if(checkBox.checked == true){
-              favesIndicator.innerHTML = "Favorited";
+              favesIndicator.innerHTML = "Favorited 🌟";
               favesIndicator.style.color = "#FF905E";
               document.getElementById('restaurants-list').style.backgroundColor="#D4DADC";
                const url = `http://localhost:1337/restaurants/${restaurant.id}`;
@@ -218,8 +218,8 @@ createRestaurantHTML = (restaurant) => {
 
              } else {
 
-              favesIndicator.innerHTML = "Favorited";
-              favesIndicator.style.color = "#FF905E";
+              favesIndicator.innerHTML = "Indicate Favorite";
+              favesIndicator.style.color = "black";
               document.getElementById('restaurants-list').style.backgroundColor="#D4DADC";
               const url = `http://localhost:1337/restaurants/${restaurant.id}`;
                    fetch(url, {
