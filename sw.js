@@ -1,4 +1,5 @@
-
+importScripts("/js/idb.js");
+importScripts("/js/dbhelper.js");
 const cache_name = 'restaurant-reviews-v1';
 const cache_items = [
         "./",
@@ -61,12 +62,12 @@ addEventListener('fetch', event => {
 
 
 
-self.addEventListener('sync', e => {
-  console.log("service worker syncing", e);
-  if(e.tag === "sync-new-reviews") {
+self.addEventListener('sync', event => {
+  console.log("service worker syncing", event);
+  if(event.tag === "sync-new-reviews") {
     console.log("syncing new reviews");
-    e.waitUntil(
-      db.addOfflineReviewtoIDB()
+    event.waitUntil(
+      db.getOfflineReviews()
         .then(data => {
           for (const review of data) {
             fetch("http://localhost:1337/reviews/", {

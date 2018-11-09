@@ -128,7 +128,7 @@ const db = (() => {
 
 
  
-  getOfflineReviewa = () => {
+  getOfflineReviews = () => {
     return dbPromise
       .then(db => {
         const tx = db.transaction("offline-reviews", "readonly");
@@ -140,7 +140,7 @@ const db = (() => {
 
 
 
-  deleteofflineReview = id => {
+  deleteOfflineReview = id => {
     return dbPromise
       .then(db => {
         const tx = db.transaction("offline-reviews", "readwrite");
@@ -160,8 +160,8 @@ const db = (() => {
     addSingleReview: (addSingleReview),
     getReviewByRestaurantId: (getReviewByRestaurantId),
     addOfflineReviewtoIDB: (addOfflineReviewtoIDB),
-    getOfflineReviewa: (getOfflineReviewa),
-    deleteofflineReview: (deleteofflineReview)
+    getOfflineReviews: (getOfflineReviews),
+    deleteOfflineReview: (deleteOfflineReview)
   }
 })();
 

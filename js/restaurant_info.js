@@ -207,6 +207,7 @@ createNameInput = () => {
   input.setAttribute('type', 'text');
   input.setAttribute('class', 'name');
   input.setAttribute('placeholder', 'Your name here...');
+  input.setAttribute('aria-label', 'reviewer-name');
   
 
 
@@ -225,6 +226,7 @@ createRatingInput = () => {
   input.setAttribute('max', '5');
   input.setAttribute('class', 'rating');
   input.setAttribute('placeholder', 'Your rating...');
+  input.setAttribute('aria-label', 'reviewer-rating');
 
   return input;
 }
@@ -238,6 +240,7 @@ createCommentInput = () => {
   const textarea = document.createElement('textarea');
   textarea.setAttribute('class', 'comment');
   textarea.setAttribute('placeholder', 'Your comment...');
+  textarea.setAttribute('aria-label', 'reviewer-comment');
 
   
   return textarea;
